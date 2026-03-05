@@ -29,13 +29,13 @@ export default function ContactPage() {
                     transition={{ duration: 0.6 }}
                 >
                     <h1>Contact Us</h1>
-                    <p>We'd love to hear from you. Reach out with any questions or inquiries.</p>
+                    <p>We&apos;d love to hear from you. Reach out with any questions or inquiries.</p>
                 </motion.div>
             </section>
 
             <section className="section-padding" style={{ backgroundColor: 'var(--color-cream)' }}>
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: 'var(--space-4xl)' }}>
+                    <div className="contact-grid">
 
                         {/* Contact Information */}
                         <motion.div
@@ -44,7 +44,7 @@ export default function ContactPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2 style={{ fontSize: '2rem', color: 'var(--color-secondary)', marginBottom: 'var(--space-md)' }}>
+                            <h2 style={{ fontSize: 'clamp(1.6rem, 3vw, 2rem)', color: 'var(--color-secondary)', marginBottom: 'var(--space-md)' }}>
                                 Get In Touch
                             </h2>
                             <p style={{ color: 'var(--color-gray-600)', marginBottom: 'var(--space-2xl)', lineHeight: '1.8' }}>
@@ -54,14 +54,14 @@ export default function ContactPage() {
                             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xl)' }}>
                                 <div>
                                     <h4 style={{ color: 'var(--color-accent)', marginBottom: 'var(--space-xs)', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Customer Service</h4>
-                                    <a href="mailto:hello@artisanleather.com" style={{ display: 'block', color: 'var(--color-secondary)', fontSize: '1.1rem', fontWeight: '500', marginBottom: '4px' }}>hello@artisanleather.com</a>
-                                    <a href="tel:+18005551234" style={{ display: 'block', color: 'var(--color-secondary)', fontSize: '1.1rem', fontWeight: '500' }}>+1 (800) 555-1234</a>
+                                    <a href="mailto:hello@artisanleather.com" style={{ display: 'block', color: 'var(--color-secondary)', fontSize: '1.05rem', fontWeight: '500', marginBottom: '4px', wordBreak: 'break-word' }}>hello@artisanleather.com</a>
+                                    <a href="tel:+18005551234" style={{ display: 'block', color: 'var(--color-secondary)', fontSize: '1.05rem', fontWeight: '500' }}>+1 (800) 555-1234</a>
                                     <p style={{ color: 'var(--color-gray-500)', fontSize: '0.9rem', marginTop: '8px' }}>Mon-Fri: 9am - 6pm EST</p>
                                 </div>
 
                                 <div>
-                                    <h4 style={{ color: 'var(--color-accent)', marginBottom: 'var(--space-xs)', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Workshop & Headquarters</h4>
-                                    <p style={{ color: 'var(--color-secondary)', fontSize: '1.1rem', fontWeight: '500', lineHeight: '1.6' }}>
+                                    <h4 style={{ color: 'var(--color-accent)', marginBottom: 'var(--space-xs)', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Workshop &amp; Headquarters</h4>
+                                    <p style={{ color: 'var(--color-secondary)', fontSize: '1.05rem', fontWeight: '500', lineHeight: '1.6' }}>
                                         123 Leather Lane<br />
                                         Florence, IT 50125<br />
                                         Italy
@@ -70,7 +70,7 @@ export default function ContactPage() {
 
                                 <div>
                                     <h4 style={{ color: 'var(--color-accent)', marginBottom: 'var(--space-xs)', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Wholesale Inquiries</h4>
-                                    <a href="mailto:wholesale@artisanleather.com" style={{ color: 'var(--color-secondary)', fontSize: '1.1rem', fontWeight: '500' }}>wholesale@artisanleather.com</a>
+                                    <a href="mailto:wholesale@artisanleather.com" style={{ color: 'var(--color-secondary)', fontSize: '1.05rem', fontWeight: '500', wordBreak: 'break-word' }}>wholesale@artisanleather.com</a>
                                 </div>
                             </div>
                         </motion.div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             style={{
                                 backgroundColor: 'var(--color-white)',
-                                padding: 'var(--space-3xl)',
+                                padding: 'clamp(var(--space-xl), 4vw, var(--space-3xl))',
                                 borderRadius: 'var(--radius-lg)',
                                 boxShadow: 'var(--shadow-md)',
                             }}
@@ -108,7 +108,7 @@ export default function ContactPage() {
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-lg)' }}>
-                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-lg)' }}>
+                                    <div className="contact-form-row">
                                         <div>
                                             <label htmlFor="name" style={{ display: 'block', marginBottom: '8px', fontSize: '0.9rem', color: 'var(--color-gray-600)' }}>Full Name *</label>
                                             <input

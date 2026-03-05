@@ -1414,6 +1414,34 @@ ol {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* ===== ABOUT & CONTACT PAGE LAYOUTS ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+  height: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-4xl);
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
 /* ===== LAYOUT UTILITY CLASSES ===== */
 .cart-layout {
   display: grid;
@@ -1709,6 +1737,25 @@ ol {
 
   .related-products .products-grid {
     grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* About & Contact responsive */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .about-image {
+    height: 300px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
   }
 
   /* Header icons */
