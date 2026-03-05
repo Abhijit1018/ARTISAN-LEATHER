@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏛️ Artisan Leather Co. - Premium E-Commerce Storefront
 
-## Getting Started
+A modern, high-performance, and visually stunning e-commerce application built for a boutique leather goods brand. The project emphasizes artisanal quality, sustainability, and traditional craftsmanship while delivering a smooth, premium user experience.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Storefront & Catalog**: Beautifully animated product grids, Best Sellers carousel, and highly detailed individual product pages.
+- **Dynamic Currency System**: Automatically detects the user's localized currency, formats prices accordingly using international exchange rates, and allows manual currency toggling.
+- **Shopping Cart & Checkout**: Fully functional cart utilizing React Context and LocalStorage to manage items, calculate subtotals, and simulate shipping costs.
+- **User Accounts & Wishlists**: Simulated user authentication with protected routes. Users can save products to their 'Favorites' and access their personal Dashboard (Order History, Addresses).
+- **Admin Dashboard**: A secure admin portal providing mock analytics (Revenue, Active Orders), plus simulated Product and Order management capabilities.
+- **Rich UI & Animations**: Smooth entrance animations, scroll-triggered reveals, and micro-interactions powered by **Framer Motion**.
+- **Responsive Design**: Flawless experience across desktop, tablet, and mobile devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Framework:** Next.js (App Router)
+- **Styling:** Global CSS with CSS Variables & Utility Classes
+- **Animations:** Framer Motion
+- **State Management:** React Context API (Auth, Cart, Favorites, Currency)
+- **Data Persistence:** LocalStorage (simulated backend)
+- **Fonts:** Google Fonts (Playfair Display, Inter)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Installation & Setup
 
-## Learn More
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Abhijit1018/ARTISAN-LEATHER.git
+   cd ARTISAN-LEATHER
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the application running.
 
-## Deploy on Vercel
+## 🔑 Demo Accounts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To test the User Profile and Admin Dashboard features, you can either register a new account or use the demo admin credentials:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Admin Email:** `admin@artisanleather.com`
+- **Password:** `admin`
+
+## 🎨 Design Philosophy
+
+The website centers around premium handcrafted leather goods, using warm earth tones (browns, golds, creams) to evoke a sense of luxury and traditional craftsmanship. The UI incorporates subtle glassmorphism, depth-creating shadows, and elegant typography to build trust and highlight product quality.
+
+---
+*Built with ❤️ utilizing Next.js.*
