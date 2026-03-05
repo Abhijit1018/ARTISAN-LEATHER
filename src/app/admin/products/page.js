@@ -21,7 +21,7 @@ export default function AdminProductsPage() {
                 <button className="btn btn-primary" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>+ Add Product</button>
             </div>
 
-            <div style={{ backgroundColor: 'var(--color-white)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)', overflow: 'hidden' }}>
+            <div className="admin-table-wrap" style={{ backgroundColor: 'var(--color-white)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)', overflow: 'hidden' }}>
                 <div style={{ padding: 'var(--space-md)', borderBottom: '1px solid var(--color-gray-200)', display: 'flex', gap: '16px' }}>
                     <input
                         type="text"

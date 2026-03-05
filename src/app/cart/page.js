@@ -30,39 +30,32 @@ export default function CartPage() {
                 <div className="container">
 
                     {cartItems.length === 0 ? (
-                        <div style={{ textAlign: 'center', padding: '100px 0', backgroundColor: 'var(--color-white)', borderRadius: 'var(--radius-lg)' }}>
+                        <div style={{ textAlign: 'center', padding: '80px 20px', backgroundColor: 'var(--color-white)', borderRadius: 'var(--radius-lg)' }}>
                             <div style={{ fontSize: '4rem', marginBottom: 'var(--space-md)' }}>🛒</div>
                             <h2 style={{ marginBottom: 'var(--space-md)' }}>Your cart is empty</h2>
                             <p style={{ color: 'var(--color-gray-500)', marginBottom: 'var(--space-xl)' }}>Looks like you haven't added any premium leather goods yet.</p>
                             <Link href="/shop" className="btn btn-primary">Continue Shopping</Link>
                         </div>
                     ) : (
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 380px', gap: 'var(--space-3xl)', alignItems: 'flex-start' }}>
+                        <div className="cart-layout">
 
                             {/* Cart Items */}
                             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
                                 {cartItems.map((item) => (
                                     <motion.div
                                         key={item.id}
+                                        className="cart-item-card"
                                         layout
                                         initial={{ opacity: 0, scale: 0.95 }}
                                         animate={{ opacity: 1, scale: 1 }}
                                         exit={{ opacity: 0, scale: 0.9 }}
-                                        style={{
-                                            display: 'flex',
-                                            gap: 'var(--space-lg)',
-                                            backgroundColor: 'var(--color-white)',
-                                            padding: 'var(--space-lg)',
-                                            borderRadius: 'var(--radius-lg)',
-                                            boxShadow: 'var(--shadow-sm)'
-                                        }}
                                     >
-                                        <div style={{ position: 'relative', width: '120px', height: '120px', borderRadius: 'var(--radius-md)', overflow: 'hidden', flexShrink: 0 }}>
+                                        <div className="cart-item-image">
                                             <Image src={item.image} alt={item.name} fill style={{ objectFit: 'cover' }} />
                                         </div>
 
-                                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}>
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                                        <div className="cart-item-details">
+                                            <div className="cart-item-header">
                                                 <div>
                                                     <h3 style={{ fontSize: '1.2rem', color: 'var(--color-secondary)', marginBottom: '4px' }}>
                                                         <Link href={`/product/${item.slug}`}>{item.name}</Link>
@@ -71,14 +64,14 @@ export default function CartPage() {
                                                 </div>
                                                 <button
                                                     onClick={() => removeFromCart(item.id)}
-                                                    style={{ color: 'var(--color-gray-400)', padding: '4px' }}
+                                                    style={{ color: 'var(--color-gray-400)', padding: '4px', fontSize: '1rem' }}
                                                     aria-label="Remove item"
                                                 >
                                                     ✕
                                                 </button>
                                             </div>
 
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
+                                            <div className="cart-item-footer">
                                                 <div className="qty-selector" style={{ transform: 'scale(0.85)', transformOrigin: 'left' }}>
                                                     <button className="qty-btn" onClick={() => updateQuantity(item.id, item.quantity - 1)}>−</button>
                                                     <span className="qty-value">{item.quantity}</span>

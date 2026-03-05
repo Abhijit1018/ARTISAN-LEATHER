@@ -55,7 +55,7 @@ export default function Header() {
                         <CurrencySelector />
 
                         {(authLoaded && cartLoaded && favLoaded) && (
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginLeft: '8px' }}>
+                            <div className="header-icons">
                                 <Link href={user ? "/profile" : "/login"} aria-label="User Profile" style={{ fontSize: '1.2rem', color: 'var(--color-white)', textDecoration: 'none' }}>
                                     👤
                                 </Link>
@@ -108,6 +108,10 @@ export default function Header() {
                     <Link href="/about" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>About Us</Link>
                     <Link href="/faq" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>FAQs</Link>
                     <Link href="/contact" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Contact</Link>
+                    <div style={{ margin: '8px 0', borderTop: '1px solid rgba(255,255,255,0.15)' }}></div>
+                    <Link href={user ? "/profile" : "/login"} className="mobile-nav-link" onClick={() => setMobileOpen(false)}>{user ? 'My Account' : 'Sign In'}</Link>
+                    <Link href="/favorites" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Favorites {favorites.length > 0 ? `(${favorites.length})` : ''}</Link>
+                    <Link href="/cart" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Cart {itemCount > 0 ? `(${itemCount})` : ''}</Link>
                 </nav>
             </div>
         </>

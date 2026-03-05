@@ -32,7 +32,7 @@ export default function AdminOrdersPage() {
         <div>
             <h1 style={{ fontSize: '2rem', color: 'var(--color-secondary)', marginBottom: 'var(--space-xl)' }}>Orders</h1>
 
-            <div style={{ backgroundColor: 'var(--color-white)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)', overflow: 'hidden' }}>
+            <div className="admin-table-wrap" style={{ backgroundColor: 'var(--color-white)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)', overflow: 'hidden' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                     <thead>
                         <tr style={{ backgroundColor: 'var(--color-cream)', textAlign: 'left' }}>

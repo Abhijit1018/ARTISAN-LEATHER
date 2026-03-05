@@ -16,7 +16,7 @@ export default function AdminDashboardPage() {
         <div>
             <h1 style={{ fontSize: '2rem', color: 'var(--color-secondary)', marginBottom: 'var(--space-xl)' }}>Dashboard Overview</h1>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 'var(--space-lg)', marginBottom: 'var(--space-3xl)' }}>
+            <div className="admin-stats-grid">
                 {stats.map((stat) => (
                     <div key={stat.label} style={{ backgroundColor: 'var(--color-white)', padding: 'var(--space-xl)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
                         <p style={{ color: 'var(--color-gray-500)', fontSize: '0.9rem', marginBottom: '8px' }}>{stat.label}</p>
@@ -30,8 +30,8 @@ export default function AdminDashboardPage() {
                 ))}
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 'var(--space-xl)' }}>
-                <div style={{ backgroundColor: 'var(--color-white)', padding: 'var(--space-2xl)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
+            <div className="admin-content-grid">
+                <div className="admin-table-wrap" style={{ backgroundColor: 'var(--color-white)', padding: 'var(--space-2xl)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
                     <h3 style={{ marginBottom: 'var(--space-lg)' }}>Recent Orders</h3>
                     <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                         <thead>
