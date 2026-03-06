@@ -1,4 +1,4 @@
-import { Playfair_Display, Inter } from 'next/font/google';
+import { Playfair_Display, Inter, Noto_Sans } from 'next/font/google';
 import './globals.css';
 import { CurrencyProvider } from '@/context/CurrencyContext';
 import { AuthProvider } from '@/context/AuthContext';
@@ -20,6 +20,13 @@ const inter = Inter({
   display: 'swap',
 });
 
+const notoSans = Noto_Sans({
+  subsets: ['latin', 'devanagari'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-currency',
+  display: 'swap',
+});
+
 export const metadata = {
   title: 'Artisan Leather Co. | Premium Handcrafted Leather Goods',
   description:
@@ -36,7 +43,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable} ${notoSans.variable}`}>
       <body>
         <AuthProvider>
           <CurrencyProvider>

@@ -31,6 +31,7 @@
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-currency: 'Noto Sans', 'Inter', -apple-system, sans-serif;
 
   /* Spacing */
   --space-xs: 4px;
@@ -826,13 +827,14 @@ ol {
 }
 
 .price-current {
-  font-family: var(--font-heading);
+  font-family: var(--font-currency);
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-primary);
 }
 
 .price-original {
+  font-family: var(--font-currency);
   font-size: 0.9rem;
   color: var(--color-gray-400);
   text-decoration: line-through;
@@ -1278,7 +1280,7 @@ ol {
 }
 
 .product-detail-price {
-  font-family: var(--font-heading);
+  font-family: var(--font-currency);
   font-size: 2rem;
   color: var(--color-primary);
   margin-bottom: var(--space-lg);
